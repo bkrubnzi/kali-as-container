@@ -7,3 +7,5 @@ services:
     ports:
       - "3389:3389"
     entrypoint: /bin/bash
+    stdin_open: true
+    tty: true

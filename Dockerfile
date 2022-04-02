@@ -12,8 +12,8 @@ RUN SOURCE="deb http://downloads.sourceforge.net/project/ubuntuzilla/mozilla/apt
 RUN apt-get install -y xserver-xorg-dev autoconf libtool pkg-config libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc curl &&\
         apt autoremove -y && \
         apt autoclean -y
-RUN git clone https://github.com/neutrinolabs/xorgxrdp.git /tmp/ && \
-        sh -c /tmp/xorgxrdp/bootstrap && \
-	sh -c /tmp/xorgxrdp/configure && \
+RUN git clone https://github.com/neutrinolabs/xorgxrdp.git /tmp/xorgxrdp/ && \
+        cd /tmp/xorgxrdp; sh -c /tmp/xorgxrdp/bootstrap && \
+	cd /tmp/xorgxrdp; sh -c /tmp/xorgxrdp/configure && \
 	make -C /tmp/xorgxrdp/ && \
         make -C /tmp/xorgxrdp/ install
