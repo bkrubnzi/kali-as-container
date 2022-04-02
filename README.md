@@ -10,9 +10,9 @@
    `docker exec -it kali-linux-default /bin/bash`
    This will drop you into a root shell of your new docker container
 3. Run the following commands:
-	a. `passwd`
-	b. `service xrdp start`
-	c. `netstat -antp tcp`
+ -  `passwd`
+ -  `service xrdp start`
+ - `netstat -antp tcp`
    You should see that xrdp is now running on port 3389
 4. Use your RDP client to connect to localhost on port 3389
 
