@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  kali-rolling:
+    build: C:\Users\bkrubnzi\mygits\.
+    container_name: kali-linux-default
+    hostname: frankenkali
+    ports:
+      - "3390:3389"
+    entrypoint: /bin/bash
