@@ -19,4 +19,4 @@ RUN git clone https://github.com/neutrinolabs/xorgxrdp.git /tmp/; \
 	sh -c /tmp/xorgxrdp/bootstrap; \
 	sh -c /tmp/xorgxrdp/configure; \
 	make -C /tmp/xorgxrdp/; \
-  make -C /tmp/xorgxrdp/ install
+        make -C /tmp/xorgxrdp/ install
