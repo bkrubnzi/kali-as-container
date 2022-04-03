@@ -6,6 +6,9 @@ services:
     hostname: frankenkali
     ports:
       - "3389:3389"
-    entrypoint: /bin/bash
+    volumes:
+      - ./init.sh:/root/init.sh
+      - ./set_pass.expect:/root/set_pass.expect
+    command: [ "/root/init.sh" ]
     stdin_open: true
     tty: true
