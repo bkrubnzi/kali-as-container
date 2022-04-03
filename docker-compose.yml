@@ -6,7 +6,6 @@ services:
     hostname: frankenkali
     network_mode: host
     environment:
-      IP: ${IP}
       DISPLAY: ${IP}:0
     ports:
       - "3389:3389"
