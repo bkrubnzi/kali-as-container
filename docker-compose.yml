@@ -4,11 +4,16 @@ services:
     build: .
     container_name: kali-linux-default
     hostname: frankenkali
+    network_mode: host
+    environment:
+      IP: ${IP}
+      DISPLAY: ${IP}:0
     ports:
       - "3389:3389"
     volumes:
       - ./init.sh:/root/init.sh
       - ./set_pass.expect:/root/set_pass.expect
+      - /tmp/.X11-unix:/tmp/.X11-unix
     command: [ "/root/init.sh" ]
     stdin_open: true
     tty: true
