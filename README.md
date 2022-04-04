@@ -1,6 +1,6 @@
 # Setup XWindows (optional)
 1. Install XQuartz
-2. run set_host_display.sh
+2. run `./set_host_display.sh`
 3. Follow the instructions below
 # Run the Container
 1. Install a remote desktop client for your operating system
