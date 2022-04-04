@@ -4,7 +4,6 @@ services:
     build: .
     container_name: kali-linux-default
     hostname: frankenkali
-    network_mode: host
     environment:
       DISPLAY: ${IP}:0
     ports:
