@@ -8,4 +8,6 @@
   - `source ./set_host_display.sh`
   - `docker-compose up`
 2. Use your RDP client to connect to localhost on port 3389
-**Note:** Please note that your configuration may vary - for now, remove any references to XWindows or displays from your copy of the repo.  Contributions welcome from Windows developers!
+
+> ###### Note
+> Please note that your configuration may vary - for now, remove any references to XWindows or displays from your copy of the repo.  Contributions welcome from Windows developers!
