@@ -1,4 +1,4 @@
-# Run the Container
+# Setup the Basics
 1. Install a remote desktop client for your operating system
 2. Install Docker for your operating system
 3. Install an XWindows manager for your operating system (optional)
