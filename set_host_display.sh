@@ -1,3 +1,7 @@
 #!/bin/bash
 export IP=`ipconfig getifaddr en0`
-xhost + $IP
+if  command -v xhost &> /dev/null
+then
+    xhost + $IP
+fi
+
