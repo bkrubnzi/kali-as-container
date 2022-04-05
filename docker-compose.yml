@@ -9,9 +9,11 @@ services:
     ports:
       - "3389:3389"
     volumes:
-      - ./init.sh:/root/init.sh
-      - ./set_pass.expect:/root/set_pass.expect
+      - ~/kali_share:/root/kali_share
+      - ./init.sh:/root/scripts/init.sh
+      - ./set_pass.expect:/root/scripts/set_pass.expect
+      - ./bashrc:/root/.bashrc
       - /tmp/.X11-unix:/tmp/.X11-unix
-    command: [ "/root/init.sh" ]
+    command: [ "/root/scripts/init.sh" ]
     stdin_open: true
     tty: true
