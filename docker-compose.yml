@@ -12,7 +12,7 @@ services:
       - ~/kali_share:/root/kali_share
       - ./init.sh:/root/scripts/init.sh
       - ./set_pass.expect:/root/scripts/set_pass.expect
-      - ./bashrc:/root/.bashrc
+      - ./.bashrc:/root/.bashrc
       - /tmp/.X11-unix:/tmp/.X11-unix
     command: [ "/root/scripts/init.sh" ]
     stdin_open: true
