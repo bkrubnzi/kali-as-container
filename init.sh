@@ -1,5 +1,5 @@
 #!/bin/bash
 
 service xrdp restart
-./root/set_pass.expect root toor
+./root/scripts/set_pass.expect root toor
 /bin/bash
