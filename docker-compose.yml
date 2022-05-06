@@ -1,19 +1,19 @@
 version: '3.9'
 services:
-  kali-rolling:
+  kali-rolling-1:
     build: .
-    container_name: kali-linux-default
-    hostname: frankenkali
+    container_name: kali-1
+    hostname: frankenkali-1
     environment:
       DISPLAY: ${IP}:0
     ports:
       - "3389:3389"
     volumes:
-      - ~/kali_share:/root/kali_share
-      - ./init.sh:/root/scripts/init.sh
-      - ./set_pass.expect:/root/scripts/set_pass.expect
+      - ~/kali_home:/root/
+      - ./scripts/:/root/scripts
       - ./.bashrc:/root/.bashrc
       - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./hosts:/etc/hosts
     command: [ "/root/scripts/init.sh" ]
     stdin_open: true
     tty: true

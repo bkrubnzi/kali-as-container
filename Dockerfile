@@ -17,3 +17,8 @@ RUN git clone https://github.com/neutrinolabs/xorgxrdp.git /tmp/xorgxrdp/ && \
 	cd /tmp/xorgxrdp; sh -c /tmp/xorgxrdp/configure && \
 	make -C /tmp/xorgxrdp/ && \
         make -C /tmp/xorgxrdp/ install
+RUN apt-get install -y inetutils-ping feroxbuster &&\
+        apt autoremove -y &&\
+        apt autoclean -y
+RUN wget https://dl.pstmn.io/download/latest/linux64 --content-disposition --directory-prefix /root &&\
+        cd /root/;FILENAME=`ls post*`;tar -xzf $FILENAME;rm $FILENAME;mkdir apps;mv Postman apps;ln -s ~/apps/Postman/Postman postman
