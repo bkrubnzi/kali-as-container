@@ -13,7 +13,7 @@ services:
       - ./scripts/:/root/scripts
       - ./.bashrc:/root/.bashrc
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - ./hosts:/etc/hosts
+      - ./kali_home/hosts:/etc/hosts
     command: [ "/root/scripts/init.sh" ]
     stdin_open: true
     tty: true
